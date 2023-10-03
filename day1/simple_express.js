@@ -21,8 +21,16 @@ app.post('/createUser', (req, res)=>{
 
 function handlePostOne(req, res){
 
+    // There are multiple ways to input data using post ->
+    // 1. using query params ?
+    // 2. using headers
+
+    const counter = req.header('counter'); // used for accessing the header from a http request
+                                            // where the header is named counter
+
+
     res.json({
-        'name':"alan"
+        'counter':counter
     })
 }
 
