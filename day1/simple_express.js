@@ -14,6 +14,20 @@ app.get('/', (req ,res)=>{
     })
 });
 
+app.post('/createUser', (req, res)=>{
+    
+})
+
+
+function handlePostOne(req, res){
+
+    res.json({
+        'name':"alan"
+    })
+}
+
+app.post("/t",handlePostOne);
+
 
 app.listen(port, ()=>{
     console.log(`server listening on ${port}`);
